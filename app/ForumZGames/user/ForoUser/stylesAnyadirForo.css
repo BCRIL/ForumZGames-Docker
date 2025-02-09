@@ -1,0 +1,269 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* Barra de navegación */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #02111f;
+    padding: 15px 40px;
+    height: 50px;
+    font-family: 'Jersey 10', sans-serif;
+    letter-spacing: 3px;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-left li,
+.nav-right li {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.nav-left li {
+    margin-right: 150px;
+    font-size: 45px;
+}
+
+.nav-right li {
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-left li:not(.search-container):hover,
+.nav-right li:hover {
+    transform: scale(0.95);
+}
+
+a:hover {
+    color: #61a1ff;
+}
+
+/* Logo centrado */
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto;
+}
+
+/* Content Area */
+.content {
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #333;
+}
+
+input[type="text"], textarea, select, .image-upload input {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+select {
+    height: 40px;
+}
+
+.image-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 250px; /* Aumentar altura de la sección de imagen */
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.image-upload img {
+    width: 60px;
+    height: 60px;
+}
+
+.publish-button {
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.publish-button:hover {
+    background-color: #0056b3;
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #021324;
+}
+
+.footer-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    position: relative;
+    color: white;
+    font-family: 'Jersey 10', sans-serif;
+    letter-spacing: 3px;
+}
+
+.footer-title::before,
+.footer-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 37%;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.footer-title::before {
+    left: 0;
+    margin-right: 10px;
+}
+
+.footer-title::after {
+    right: 0;
+    margin-left: 10px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    padding: 20px 0;
+    color: white;
+    font-style: italic;
+}
+
+.footer-column {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.footer-column img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-column img:hover {
+    transform: scale(1.2);
+}
+
+.small-link {
+    transition: transform 0.3s ease;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.small-link:hover {
+    transform: scale(1.1);
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #ffffff; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    background-color: #686868; 
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 22px; 
+    border: 1px solid transparent; 
+}
+
+
+.pagination a.active {
+    background-color: #b80101; 
+    color: rgb(255, 255, 255); 
+    border: 1px solid #b80101; 
+}
+
+.pagination a:hover {
+    background-color: #FF0000; 
+    color: white; 
+    border: 1px solid #FF0000; 
+}
+
+
+.pagination .prev-next {
+    background-color: #023061; 
+    border: none;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 10px 20px;
+}
+
+.pagination .prev-next:hover {
+    background-color: #0056b3;
+}
+

@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./app
+    ports:
+      - "8080:80" # Puerto del servidor web
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=ForumZGames
+      - DB_USER=postgres
+      - DB_PASSWORD=root
+    volumes:
+      - ./app/ForumZGames:/var/www/html # Mapea tu aplicación al contenedor
+      - ./app/ForumZGames/imagenes:/var/www/html/imagenes # Mapea la carpeta de imágenes
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: ForumZGames
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./app/db:/docker-entrypoint-initdb.d
+    ports:
+      - "5433:5432" # Puerto para la base de datos PostgreSQL
+
+volumes:
+  pgdata:

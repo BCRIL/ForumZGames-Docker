@@ -1,0 +1,268 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* Barra lateral de administrador*/
+.sidebar {
+    position: fixed; /* Posición fija */
+    width: 150px; /* Ancho de la barra lateral */
+    background-color: #02111f; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 1%; /* Espacio interno */
+    height: 100%; /* Altura completa de la ventana */
+    position: fixed; /* Fija la barra lateral */
+    z-index: 1000;
+}
+
+.admin-perfil {
+    display: flex; /* Utiliza flexbox para alinear elementos */
+    align-items: center; /* Centra verticalmente */
+}
+
+.imagen-admin {
+    width: 30px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    border: 1px solid #ffffff; /* Agrega un borde a la imagen */
+    border-radius: 30px; /* Bordes redondeados opcionales */
+}
+
+.usr-admin {
+    font-size: 25px; /* Ajusta el tamaño de la fuente según sea necesario */
+}
+
+.separator-sup {
+    margin-top: 20px; /* Ajusta este valor según lo que necesites */
+    border: none; /* Si quieres que sea solo un espacio y no una línea */
+    border-top: 1px solid #ccc; /* Solo si deseas que se vea como una línea */
+}
+
+.separator-inf {
+    margin-bottom: 20px; /* Ajusta este valor según lo que necesites */
+    border: none; /* Si quieres que sea solo un espacio y no una línea */
+    border-top: 1px solid #ccc; /* Solo si deseas que se vea como una línea */
+}
+
+.nav-left, .nav-bottom {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+    font-family: 'Jersey 10', sans-serif;
+    height: 70%;
+}
+
+.nav-left li,
+.nav-bottom li {
+    margin: 15px 0; /* Margen entre los elementos */
+    transition: transform 0.3s ease;
+}
+
+.nav-left li a {
+    margin: 15px 0; /* Margen entre los elementos */
+    font-size: 30px;
+    display: inline-block; /* Hacer que el enlace ocupe todo el ancho */
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+a:hover {
+    color: #61a1ff; /* Color de fondo al pasar el ratón */
+    transform: scale(0.95);
+}
+
+.logo {
+    justify-content: center;
+    margin-top: 20px; /* Espacio inferior para separar el logo del menú */
+    position: relative; /* Fija la barra lateral */
+    bottom: 0;
+    padding: 20px; /* Espacio interno */
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto; /* Altura del logo */
+    width: auto; /* Mantener la proporción */
+}
+
+
+/* Background and Forum Description */
+.background-container {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+}
+
+
+.forum-description-container {
+    max-width: 1000px; /* Aumenta el ancho máximo */
+    width: 90%;
+    margin-left: 17%; /* Añadí un margen izquierdo para desplazar el contenido del foro */
+    background: rgba(50, 50, 50, 0.7);
+    padding: 30px;
+    border-radius: 20px;
+    color: #e1e1e1;
+    text-align: left;
+}
+
+/* Creator Info in Forum Header */
+.forum-description-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.forum-creator-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #ffffff;
+}
+
+.forum-creator-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.forum-creator-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.forum-creation-date {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+/* Forum Title and Description */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.foro-description p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e1e1e1;
+}
+
+/* Messages Container */
+.messages-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-left: 17%; /* Añadí un margen izquierdo para evitar que el sidebar cubra los mensajes */
+}
+
+.message {
+    max-width: 1000px;
+    width: 90%;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-left {
+    align-self: flex-start;
+}
+
+.message-right {
+    align-self: flex-end;
+    background: #e9f7ef;
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-info {
+    flex-grow: 1;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.message-date {
+    font-size: 12px;
+    color: #888;
+}
+
+.report-button {
+    background: none;
+    border: none;
+    color: #f00;
+    cursor: pointer;
+}
+
+.content p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Input Message Container */
+.message-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.message-input-container form {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Hace que el formulario ocupe todo el ancho del contenedor */
+    max-width: 1000px; /* Limita el ancho para que no se extienda demasiado en pantallas grandes */
+}
+
+.message-input-container input[type="text"] {
+    flex: 1; /* Permite que el campo de entrada ocupe el mayor espacio posible */
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-right: 10px; /* Espacio entre el campo de texto y el botón */
+}
+
+.send-button {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

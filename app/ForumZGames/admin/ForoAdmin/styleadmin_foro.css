@@ -1,0 +1,398 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Barra lateral de administrador*/
+.sidebar {
+    position: fixed; /* Posición fija */
+    width: 150px; /* Ancho de la barra lateral */
+    background-color: #02111f; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 1%; /* Espacio interno */
+    height: 100%; /* Altura completa de la ventana */
+    position: fixed; /* Fija la barra lateral */
+    z-index: 1000;
+}
+
+.admin-perfil {
+    display: flex; /* Utiliza flexbox para alinear elementos */
+    align-items: center; /* Centra verticalmente */
+}
+
+.imagen-admin {
+    width: 30px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    border: 1px solid #ffffff; /* Agrega un borde a la imagen */
+    border-radius: 30px; /* Bordes redondeados opcionales */
+}
+
+.usr-admin {
+    font-size: 25px; /* Ajusta el tamaño de la fuente según sea necesario */
+}
+
+.separator-sup {
+    margin-top: 20px; /* Ajusta este valor según lo que necesites */
+    border: none; /* Si quieres que sea solo un espacio y no una línea */
+    border-top: 1px solid #ccc; /* Solo si deseas que se vea como una línea */
+}
+
+.separator-inf {
+    margin-bottom: 20px; /* Ajusta este valor según lo que necesites */
+    border: none; /* Si quieres que sea solo un espacio y no una línea */
+    border-top: 1px solid #ccc; /* Solo si deseas que se vea como una línea */
+}
+
+.nav-left, .nav-bottom {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+    font-family: 'Jersey 10', sans-serif;
+    height: 70%;
+}
+
+.nav-left li,
+.nav-bottom li {
+    margin: 15px 0; /* Margen entre los elementos */
+    transition: transform 0.3s ease;
+}
+
+.nav-left li a {
+    margin: 15px 0; /* Margen entre los elementos */
+    font-size: 30px;
+    display: inline-block; /* Hacer que el enlace ocupe todo el ancho */
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+a:hover {
+    color: #61a1ff; /* Color de fondo al pasar el ratón */
+    transform: scale(0.95);
+}
+
+.logo {
+    justify-content: center;
+    margin-top: 20px; /* Espacio inferior para separar el logo del menú */
+    position: relative; /* Fija la barra lateral */
+    bottom: 0;
+    padding: 20px; /* Espacio interno */
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto; /* Altura del logo */
+    width: auto; /* Mantener la proporción */
+}
+
+.no-sidebar {
+    
+    margin-left: 150px;
+}
+
+/* Buscador */
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #d9d9d9;
+    padding: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 10px;
+    height: 40px;
+    position: relative;
+    top: 30px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;              /* Ancho del buscador */
+    max-width: 1600px;         /* Ancho máximo */
+    padding: 10px;
+    border: 2px solid #d9d9d9;
+    background-color: #FDFDFD;
+    border-radius: 56px;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Jersey 10';
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Aumentar tamaño del icono en el botón de búsqueda */
+.search-button i {
+    font-size: 30px; /* Tamaño del icono */
+    color: #d9d9d9; /* Puedes ajustar el color si lo deseas */
+}
+
+/* Existing styles remain here... */
+
+/* Ajustes para los resultados de búsqueda en admin_foro.php */
+.resultados-container {
+    position: absolute;
+    top: 100%; /* Debajo de la barra de búsqueda */
+    left: 0;
+    width: 100%; /* Ancho completo de la barra de búsqueda */
+    max-height: 300px; /* Limitar la altura */
+    overflow-y: auto; /* Activar scroll si excede la altura */
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    z-index: 1000; /* Asegura que se muestre encima de otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.result-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Ajuste el tamaño de las imágenes de los resultados de búsqueda */
+.foro-image-small {
+    width: 40px;  /* Reducir tamaño a 40px */
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.result-text {
+    font-size: 16px;
+    color: #333;
+    margin-right: auto;
+}
+
+.result-date {
+    font-size: 14px;
+    color: #888;
+}
+
+.no-results {
+    padding: 10px;
+    color: #666;
+    text-align: center;
+}
+
+
+.full-width-line {
+    border: none;              /* Elimina el borde predeterminado */
+    border-top: 6px solid #000000;  /* Estilo de la línea: grosor y color */
+    width: 80%;               /* La línea ocupa el 60% del ancho de la página */
+    margin: 20px auto;        /* Espaciado vertical y centra horizontalmente */
+    margin-top: 60px;
+}
+
+/* Lista de foros */
+.foro-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-left: 12%;
+    margin-top: 2%;
+}
+
+.highlighted-foro {
+    position: relative;
+    margin: 20px 20px;
+    background-color: #d3d3d3; /* Color gris claro para el fondo del contenedor */
+    border-radius: 8px;
+    padding: 15px;
+}
+
+/* Estilo para la caja de fondo oscuro */
+.background-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #02111f;
+    z-index: 1;
+    border-radius: 8px;
+}
+
+/* Estilo para la caja de primer plano con el contenido */
+.foreground-box {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    display: block;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+/* Imagen del foro */
+.foro-imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Título del foro */
+.titulo-foro {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000; /* Cambiado a color negro para mayor visibilidad */
+}
+
+/* Botón de eliminación del foro */
+.delete-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+}
+
+.icono-basura {
+    width: 30px; /* Tamaño más grande */
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Paginación */
+.pagination {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 12%;
+}
+
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #686868;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 22px;
+    border: 1px solid transparent;
+}
+
+.pagination a.active {
+    background-color: #b80101;
+    color: #ffffff;
+    border: 1px solid #b80101;
+}
+
+.pagination a:hover {
+    background-color: #FF0000;
+    color: white;
+    border: 1px solid #FF0000;
+}
+
+.pagination .prev-next {
+    background-color: #023061;
+    border: none;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.pagination .prev-next:hover {
+    background-color: #0056b3;
+}
+
+/* Pie de pagina */
+
+.footer {
+    margin-left: 150px;
+    text-align: center;
+    padding: 20px;
+    background-color: #021324; /* Color de fondo */
+}
+
+.footer-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    position: relative;
+    color: white;
+    font-family: 'Jersey 10', sans-serif;
+    letter-spacing: 3px;
+}
+
+.footer-title::before,
+.footer-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 5px;
+    background-color: rgb(255, 255, 255); /* Color de las líneas */
+}
+
+.footer-title::before {
+    left: 0;
+    margin-right: 10px;
+}
+
+.footer-title::after {
+    right: 0;
+    margin-left: 10px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px; /* Espacio entre columnas */
+    padding: 20px 0;
+    color: white;
+    font-style: italic;
+}
+
+.footer-column {
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-left: 50px;
+}
+
+.footer-column img {
+    width: 30px; /* Ajusta la imagen al tamaño del contenedor */
+    height: 30px; /* Mantiene la relación de aspecto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.footer-column img:hover {
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño del texto */
+}
+.small-link {
+    transition: transform 0.3s ease; /* Transición suave */
+    display: inline-block; /* Asegúrate de que los enlaces sean bloques en línea */
+    font-size: 14px; /* Ajusta el tamaño de la fuente aquí */
+}
+
+.small-link:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% */
+}

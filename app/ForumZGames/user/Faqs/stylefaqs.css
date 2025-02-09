@@ -1,0 +1,317 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Barra de navegación */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #02111f;
+    padding: 15px 40px;
+    height: 50px;
+    font-family: 'Jersey 10', sans-serif;
+    letter-spacing: 3px;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-left li,
+.nav-right li {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.nav-left li {
+    margin-right: 150px;
+    font-size: 45px;
+}
+
+.nav-right li {
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-left li:not(.search-container):hover,
+.nav-right li:hover {
+    transform: scale(0.95);
+}
+
+a:hover {
+    color: #61a1ff;
+}
+
+/* Logo centrado */
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+h2 {
+    color: #34495e;
+}
+
+/* Estilo del formulario para añadir una nueva FAQ */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilo de cada FAQ mostrada */
+div.faq {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    cursor: pointer; /* Indica que la FAQ es clickeable */
+    transition: background-color 0.3s ease;
+}
+
+div.faq:hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo al pasar el cursor para destacar la pregunta */
+}
+
+div.faq h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+div.faq h3:hover {
+    color: #3498db; /* Cambia el color del texto cuando el cursor pasa sobre la pregunta */
+}
+
+div.faq p {
+    display: none; /* Oculta las respuestas inicialmente */
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+div.faq.open p {
+    display: block; /* Muestra la respuesta cuando la FAQ está abierta */
+}
+
+div.faq small {
+    display: block;
+    margin-top: 10px;
+    color: #7f8c8d;
+    font-size: 12px;
+}
+
+/* Estilo del contenedor general */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 40px 0;
+} 
+
+/* Pie de pagina */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #021324; /* Color de fondo */
+}
+
+.footer-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    position: relative;
+    color: white;
+    font-family: 'Jersey 10', sans-serif;
+    letter-spacing: 3px;
+}
+
+.footer-title::before,
+.footer-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 35%;
+    height: 5px;
+    background-color: rgb(255, 255, 255); /* Color de las líneas */
+}
+
+.footer-title::before {
+    left: 0;
+    margin-right: 10px;
+}
+
+.footer-title::after {
+    right: 0;
+    margin-left: 10px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px; /* Espacio entre columnas */
+    padding: 20px 0;
+    color: white;
+    font-style: italic;
+}
+
+.footer-column {
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-left: 50px;
+}
+
+.footer-column img {
+    width: 30px; /* Ajusta la imagen al tamaño del contenedor */
+    height: 30px; /* Mantiene la relación de aspecto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.footer-column img:hover {
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño del texto */
+}
+.small-link {
+    transition: transform 0.3s ease; /* Transición suave */
+    display: inline-block; /* Asegúrate de que los enlaces sean bloques en línea */
+    font-size: 14px; /* Ajusta el tamaño de la fuente aquí */
+}
+
+.small-link:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% */
+}
+
+/* Responsive Styles */
+
+/* Pantallas grandes (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .nav-bar {
+        justify-content: space-between; /* Para pantallas grandes, distribuye espacio entre los elementos */
+        padding: 20px 60px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Pantallas medianas (min-width: 601px) and (max-width: 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .nav-bar {
+        flex-direction: row; /* Mantener los elementos en fila para pantallas medianas */
+        padding: 15px 30px;
+    }
+
+    .nav-left,
+    .nav-right {
+        flex-wrap: wrap; /* Permite que los elementos se ajusten si es necesario */
+    }
+
+    .nav-left li,
+    .nav-right li {
+        margin: 5px;
+        font-size: 20px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 0; /* No es necesario margen inferior en pantallas medianas */
+    }
+    .footer-title::before,
+    .footer-title::after {
+        width: 25%;
+    }
+}
+/* Pantallas pequeñas (max-width: 600px) */
+@media (max-width: 600px) {
+    .nav-bar {
+        flex-direction: column;
+        justify-content: center; /* Centramos los elementos de la barra */
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    .nav-left,
+    .nav-right {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0; /* Espacio entre los elementos de la barra */
+    }
+
+    .nav-left li,
+    .nav-right li {
+        margin: 5px 0;
+        font-size: 18px;
+    }
+
+    .logo {
+        position: relative; /* Elimina la posición absoluta para centrar mejor el logo */
+        left: 0;
+        transform: none;
+        margin-bottom: 15px;
+    }
+}
